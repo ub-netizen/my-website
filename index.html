@@ -1,88 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ubah Ismail | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ubah Ismail | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <!-- Replace with your actual photo file -->
-      <img src="photo.h.jpg" alt="Ubah Ismail" class="profile-photo" />
-      <!-- Name and title in one place -->
-      <h1>Ubah Ismail</h1>
-      <p>High school student passionate about leadership, coding, and community service</p>
-    </div>
-    <nav>
-      <a href="#about" class="tab-button" onclick="showTab('about')">About</a>
-      <a href="#projects" class="tab-button" onclick="showTab('projects')">Projects</a>
-      <a href="#extracurriculars" class="tab-button" onclick="showTab('extracurriculars')">Extracurriculars</a>
-    </nav>
-  </header>
-
-  <!-- Tab Content -->
-  <div id="about" class="tab-content">
-    <h2>About Me</h2>
-    <p>Hi! I’m Ubah Ismail, a high school junior at Franklin High School in Elk Grove, CA. I have a strong passion for leadership, technology, and community service. I’m an active member of several clubs and organizations, where I work to help others and grow personally and professionally.</p>
+    <canvas id="particles-canvas"></canvas>
     
-    <p>Through my various extracurricular activities, I’ve developed strong skills in leadership, collaboration, and problem-solving. I’m always looking for new opportunities to challenge myself and continue making a positive impact in my community.</p>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
 
-    <h3>Awards & Achievements</h3>
-    <ul>
-      <li><strong>Excellence in Tutoring</strong> – Recognized for my commitment and ability to help students improve their academic performance.</li>
-      <li><strong>Principal Honor Roll</strong> – Achieved recognition for consistent academic excellence through 2023-2025.</li>
-      <li><strong>National Honor Society Member</strong> – Selected for my academic achievements, leadership skills, and community service contributions.</li>
-    </ul>
+    <header>
+        <div class="header-container">
+            <div class="profile-photo-wrapper">
+                <div class="photo-ring"></div>
+                <img src="photo.h.jpg" alt="Ubah Ismail" class="profile-photo" />
+            </div>
+            <h1 class="typing-effect">Ubah Ismail</h1>
+            <p class="subtitle">High school student passionate about leadership, coding, and community service</p>
+        </div>
+        <nav>
+            <a href="#about" class="tab-button active" data-tab="about">About</a>
+            <a href="#projects" class="tab-button" data-tab="projects">Projects</a>
+            <a href="#extracurriculars" class="tab-button" data-tab="extracurriculars">Extracurriculars</a>
+        </nav>
+    </header>
 
-    <h3>Skills</h3>
-    <ul>
-      <li>Customer service excellence</li>
-      <li>Strong verbal and written communication</li>
-      <li>Problem-solving and adaptability</li>
-      <li>Teamwork and collaboration in fast-paced environments</li>
-    </ul>
-  </div>
+    <main>
+        <div id="about" class="tab-content active">
+            <h2 class="section-title">About Me</h2>
+            <p class="intro-text">Hi! I'm Ubah Ismail, a high school junior at Franklin High School in Elk Grove, CA. I have a strong passion for leadership, technology, and community service. I'm an active member of several clubs and organizations, where I work to help others and grow personally and professionally.</p>
+            
+            <p class="intro-text">Through my various extracurricular activities, I've developed strong skills in leadership, collaboration, and problem-solving. I'm always looking for new opportunities to challenge myself and continue making a positive impact in my community.</p>
 
-  <div id="projects" class="tab-content" style="display: none;">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>EcoTrack App</strong> – A fuel tracking and carbon monitoring app with a leaderboard.</li>
-      <li><strong>TFA Initiative</strong> – Co-founded a nonprofit that donates books to Nigerian schools.</li>
-      <li><strong>Food Bank Volunteer</strong> – Assisted with organizing and distributing goods.</li>
-    </ul>
-  </div>
+            <h3 class="section-subtitle">Awards & Achievements</h3>
+            <ul class="achievement-list">
+                <li class="achievement-item">
+                    <strong>Excellence in Tutoring</strong>
+                    <p>Recognized for my commitment and ability to help students improve their academic performance through dedicated one-on-one instruction.</p>
+                </li>
+                <li class="achievement-item">
+                    <strong>Principal Honor Roll</strong>
+                    <p>Achieved recognition for consistent academic excellence through 2023-2025, maintaining high standards across all subjects.</p>
+                </li>
+                <li class="achievement-item">
+                    <strong>National Honor Society Member</strong>
+                    <p>Selected for my academic achievements, leadership skills, and community service contributions to the school and beyond.</p>
+                </li>
+            </ul>
 
-  <div id="extracurriculars" class="tab-content" style="display: none;">
-    <h2>Extracurriculars</h2>
-    <p>Here are some of my extracurricular activities:</p>
-    <ul>
-      <li><strong>Mock Trial</strong> – Since Junior Year</li>
-      <li><strong>BSU</strong> – Since Freshman Year</li>
-      <li><strong>Interact Club President</strong> – Sophomore year in Arabic School</li>
-      <li><strong>CKF</strong> – Since Sophomore Year</li>
-      <li><strong>Food Bank Volunteer</strong> – Started abroad but now continue locally</li>
-      <li><strong>Tutoring Arabic</strong> – Throughout my sophomore Year and at 2024 Summer Camp</li>
-      <li><strong>YPLA Marketing Intern</strong> – Nonprofit teaching English to non-native speakers</li>
-    </ul>
-  </div>
+            <h3 class="section-subtitle">Core Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-badge"><span>Customer Service</span></div>
+                <div class="skill-badge"><span>Communication</span></div>
+                <div class="skill-badge"><span>Problem-Solving</span></div>
+                <div class="skill-badge"><span>Leadership</span></div>
+                <div class="skill-badge"><span>Teamwork</span></div>
+                <div class="skill-badge"><span>Adaptability</span></div>
+            </div>
+        </div>
 
-  <footer>
-    <p>© 2025 Ubah Ismail</p>
-  </footer>
+        <div id="projects" class="tab-content">
+            <h2 class="section-title">Projects</h2>
+            <p class="intro-text">Explore some of the initiatives and projects I've worked on to make a positive impact:</p>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">🚗</div>
+                        <h4>EcoTrack App</h4>
+                        <p>A fuel tracking and carbon monitoring application featuring a competitive leaderboard to encourage sustainable driving habits and environmental awareness among users.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">📚</div>
+                        <h4>TFA Initiative</h4>
+                        <p>Co-founded a nonprofit organization dedicated to donating books to schools in Nigeria, promoting literacy and education access in underserved communities.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">🤝</div>
+                        <h4>Food Bank Volunteer</h4>
+                        <p>Assisted with organizing and distributing essential goods to families in need, developing logistics and community service skills while making a tangible difference.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <script>
-    // Tab Switching JavaScript
-    function showTab(tabId) {
-      // Hide all tab contents
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(tab => tab.style.display = 'none');
+        <div id="extracurriculars" class="tab-content">
+            <h2 class="section-title">Extracurriculars</h2>
+            <p class="intro-text">My involvement in various organizations and activities that shape my leadership and character:</p>
+            
+            <ul class="activity-list">
+                <li class="activity-item">
+                        <strong>Red Cross California Executive Board Member (SAF/IS Coordinator)</strong>
+    <p>Serve on the executive board for a 1,000-member organization: plan events and initiatives to promote cultural awareness and student engagement, actively assist members when needed, and lead event execution.</p>
+</li>
+<li class="activity-item">
+    <strong>Interact Club President</strong>
+    <p>Led a newly founded club of around 50 members during Sophomore year at Arabic School, inspired by my volunteer experience at a foster home abroad: organized service projects, coordinated volunteers, and drove community initiatives.</p>
+</li>
+<li class="activity-item">
+    <strong>Mock Trial</strong>
+    <p>Active participant since Junior Year, serving as an attorney in competitive mock trial competitions and developing critical thinking, public speaking, and legal analysis skills.</p>
+</li>
+<li class="activity-item">
+    <strong>Black Student Union (BSU)</strong>
+    <p>Serve as an officer since Freshman Year, promoting cultural awareness, celebrating diversity, and fostering an inclusive school community.</p>
+</li>
+<li class="activity-item">
+    <strong>YPLA Marketing Intern</strong>
+    <p>Marketing intern at nonprofit teaching English to non-native speakers, creating engaging outreach materials and managing social media campaigns.</p>
+</li>
+<li class="activity-item">
+    <strong>Cancer Kids First (CKF)</strong>
+    <p>Active participant since Sophomore Year, engaging in cultural and educational activities that promote understanding and community building.</p>
+</li>
+<li class="activity-item">
+    <strong>Giving Tree Club</strong>
+    <p>Serve as secretary for a club of around 40 members: organize meetings, coordinate donation drives for local elementary schools, and support community service initiatives that give back to those in need.</p>
+</li>
+<li class="activity-item">
+    <strong>Arabic Tutor</strong>
+    <p>Tutored throughout Sophomore Year and at 2024 Summer Camp, guiding over 20 students in Arabic language, culture, and traditions with patience and dedication.</p>
+</li>
+            </ul>
+        </div>
+    </main>
 
-      // Show the selected tab
-      const activeTab = document.getElementById(tabId);
-      activeTab.style.display = 'block';
-    }
-  </script>
+    <footer>
+        <p>© 2025 Ubah Ismail | Built with passion and purpose</p>
+    </footer>
+
+    <button id="scrollTop" aria-label="Scroll to top">↑</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
